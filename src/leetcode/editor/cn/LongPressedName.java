@@ -43,7 +43,7 @@ class LongPressedName{
 class Solution {
     public boolean isLongPressedName(String name, String typed) {
 
-        while()
+        return false;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
