@@ -50,31 +50,52 @@ class OnesAndZeroes {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
 
+        /**
+         * 一：确定dp数组以及下标的含义
+         *      dp[i][j]代表最多有m个0和n个1的最大子集长度
+         * 二：确定递推公式
+         *      dp[i][j] = max(dp[i][j], dp[i-zeroNum][j-oneNum] + 1)
+         * 三：dp数组如何初始化
+         * 四：确定遍历顺序
+         * 五：距离推导dp数组
+         * @param strs
+         * @param m
+         * @param n
+         * @return
+         */
+
 
         public int findMaxForm(String[] strs, int m, int n) {
-            int[][] dp = new int[m + 1][n + 1];
+
+            int[][] dp = new int[m+1][n+1];
+            int zeroNum = 0;
+            int oneNum = 0;
+
             dp[0][0] = 0;
 
-            for (String str : strs) {
-                int oneNum = 0;
-                int zeroNum = 0;
-
-                for (int i = 0; i < str.length(); i++) {
-                    if (str.charAt(i) == '0') {
+            for (String str : strs) {// 遍历物品
+                zeroNum = 0;
+                oneNum = 0;
+                for(int i = 0; i < str.length(); i++){
+                    if(str.charAt(i) == '0'){
                         zeroNum++;
-                    } else {
+                    }else{
                         oneNum++;
                     }
                 }
 
-                for (int i = m; i >= zeroNum; i--) {
-                    for (int j = n; j >= oneNum; j--) {
-                        dp[i][j] = Math.max(dp[i][j], dp[i - zeroNum][j - oneNum] + 1);
+                for(int i = m; i >= zeroNum; i--){
+                    for(int j = n; j >= oneNum; j--){
+                        dp[i][j] = Math.max(dp[i][j], dp[i-zeroNum][j-oneNum] + 1);
                     }
                 }
-
             }
+
             return dp[m][n];
+
+
+
+
 
         }
 

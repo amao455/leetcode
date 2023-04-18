@@ -47,17 +47,11 @@ package leetcode.editor.cn;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.sun.org.apache.xml.internal.security.keys.keyresolver.KeyResolver.length;
-
 class WordBreak {
     public static void main(String[] args) {
         Solution solution = new WordBreak().new Solution();
-        String s = "abc";
-        List<String> wordDict = new ArrayList<>();
-        wordDict.add("a");
-        wordDict.add("bc");
-//        solution.wordBreak(s, wordDict);
-//        System.out.println("a" == "a");
+//        String s = "shkas";
+//        System.out.println(s.substring(1,2));
 
     }
 
@@ -65,19 +59,19 @@ class WordBreak {
     class Solution {
 
         public boolean wordBreak(String s, List<String> wordDict) {
-            boolean[] dp = new boolean[s.length() + 1];
+            boolean[] dp = new boolean[s.length()+1];
+            List<String> set = new ArrayList<>(wordDict);
             dp[0] = true;
 
-            for (int i = 1; i <= s.length(); i++) {
-                for (int j = 0; j < i; j++) {
-                    // wordDict.contains(s.substring(j, i))：代表
-                    if (wordDict.contains(s.substring(j, i)) && dp[j]) {
+            // 排列问题（背包放在外循环）
+            for(int i = 1; i <= s.length(); i++){
+                for(int j = 0; j < i; j++){
+                    if(set.contains(s.substring(j, i)) && dp[j] != false){
                         dp[i] = true;
                     }
                 }
             }
             return dp[s.length()];
-
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)

@@ -39,6 +39,7 @@ package leetcode.editor.cn;
 // Related Topics 数组 动态规划 👍 1319 👎 0
 
 class BestTimeToBuyAndSellStockWithCooldown {
+
     public static void main(String[] args) {
         Solution solution = new BestTimeToBuyAndSellStockWithCooldown().new Solution();
 

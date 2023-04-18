@@ -55,43 +55,20 @@ class CombinationSumIv {
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-//    public int combinationSum4(int[] nums, int target) {
-//        int[] dp = new int[target+1];
-//        dp[0] = 1;
-//
-//        for(int j = 0; j <= target; j++){
-//            for(int i = 0; i < nums.length; i++){
-//                if(j - nums[i] >= 0){
-//                    dp[j] = dp[j] + dp[j-nums[i]];
-//                }
-//            }
-//        }
-//
-//        return dp[target];
-//    }
+    public int combinationSum4(int[] nums, int target) {
+        int[] dp = new int[target+1];
+        dp[0] = 1;
 
-        int res = 0;
-
-        public int combinationSum4(int[] nums, int target) {
-            backtracking(nums, target, 0, 0);
-            return res;
-        }
-
-        public void backtracking(int[] nums, int target, int sum, int startIndex) {
-            if (sum == target) {
-                res++;
-                return;
-            }
-            if (sum > target) {
-                return;
-            }
-
-            for (int i = startIndex; i < nums.length; i++) {
-                sum += nums[i];
-                backtracking(nums, target, sum, startIndex);
-                sum -= nums[i];
+        for(int i = 0; i <= target; i++){
+            for(int j = 0; j < nums.length; j++){
+                if(i >= nums[j]){
+                    dp[i] += dp[i-nums[j]];
+                }
             }
         }
+        return dp[target];
+    }
+
     }
 //leetcode submit region end(Prohibit modification and deletion)
 

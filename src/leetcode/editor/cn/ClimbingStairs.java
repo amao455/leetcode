@@ -36,6 +36,8 @@ package leetcode.editor.cn;
 //
 // Related Topics 记忆化搜索 数学 动态规划 👍 2650 👎 0
 
+import java.util.Arrays;
+
 class ClimbingStairs {
     public static void main(String[] args) {
         Solution solution = new ClimbingStairs().new Solution();
@@ -45,7 +47,22 @@ class ClimbingStairs {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int climbStairs(int n) {
-            return 0;
+            int[] dp = new int[n+1];
+            int[] weight = new int[]{1,2};
+            dp[0] = 1;
+
+            for(int i = 0; i <= n; i++){
+                for(int j = 0; j < weight.length; j++){
+                    if(i >= weight[j]){
+                        dp[i] += dp[i-weight[j]];
+                    }
+                }
+            }
+
+            return dp[n];
+
+
+
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)

@@ -34,28 +34,39 @@ package leetcode.editor.cn;
 class PerfectSquares {
     public static void main(String[] args) {
         Solution solution = new PerfectSquares().new Solution();
+        solution.numSquares(12);
 
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int numSquares(int n) {
-            int num = (int) Math.sqrt(n);
-            int[] dp = new int[n + 1];
-            for (int i = 1; i < dp.length; i++) {
-                dp[i] = Integer.MAX_VALUE;
+            int[] dp = new int[n+1];
+            for(int i = 0; i < dp.length; i++){
+              dp[i] = Integer.MAX_VALUE;
             }
 
-            for (int i = 0; i <= num; i++) {
-                for (int j = i * i; j <= n; j++) {
-                    if (dp[j - i * i] != Integer.MAX_VALUE) {
-                        dp[j] = Math.min(dp[j], dp[j - i * i] + 1);
-                    }
+            int num = (int)(Math.sqrt(n));
+            int[] nums = new int[num];
+            for(int i = 0; i < nums.length; i++){
+                nums[i] = i+1;
+            }
 
+            dp[0] = 0;
+            for(int i = 0; i < nums.length; i++){
+                for(int  j = (int)(Math.pow(nums[i] , 2)); j <= n;  j++){
+                    if(dp[j - (int)(Math.pow(nums[i] , 2))] != Integer.MAX_VALUE){
+                        dp[j] = Math.min(dp[j], dp[j-(int)(Math.pow(nums[i] , 2))] + 1);
+                    }
                 }
             }
+
             return dp[n];
+
         }
+
+
+
     }
 //leetcode submit region end(Prohibit modification and deletion)
 

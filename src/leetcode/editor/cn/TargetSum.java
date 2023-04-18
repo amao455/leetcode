@@ -66,8 +66,8 @@ class TargetSum {
 //        System.out.println("执行吗");
 
         int i = 1;
-        while(!scanner.hasNext("#")){
-            System.out.println("第"+i+"个字符串"+scanner.next());
+        while (!scanner.hasNext("#")) {
+            System.out.println("第" + i + "个字符串" + scanner.next());
             i++;
         }
 
@@ -78,6 +78,48 @@ class TargetSum {
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
+
+
+        public int findTargetSumWays(int[] nums, int target) {
+            int sum = 0;
+            for (int num : nums) {
+                sum += num;
+            }
+
+            if ((sum + target) % 2 == 1) {
+                return 0;
+            }
+
+            if (Math.abs(target) > sum) {
+                return 0;
+            }
+
+            int bigSize = (sum + target) / 2;
+            int[][] dp = new int[nums.length][bigSize + 1];
+
+            // 初始化问题
+            // 第一行
+            dp[0][0] = 1;
+            if(bigSize >= nums[0]){
+                dp[0][nums[0]] = dp[0][nums[0]] + 1;
+            }
+
+            for (int i = 1; i < nums.length; i++) {
+                for (int j = 0; j < bigSize + 1; j++) {
+                    // 放不下
+                    // 不用考虑放不放
+                    if(nums[i] > j){
+                         dp[i][j] = dp[i-1][j];
+                    }else{
+                        // 放得下
+                        // 再考虑放不放
+                        dp[i][j] = dp[i-1][j] + dp[i-1][j-nums[i]];
+                    }
+                }
+            }
+            return dp[nums.length-1][bigSize];
+        }
+
         // 转换为在集合中找和为bigSize的组合数
 //    public int findTargetSumWays1(int[] nums, int target) {
 //
@@ -106,43 +148,43 @@ class TargetSum {
 //        return dp[bigSize];
 //    }
 
-        int res = 0;
+        //int res = 0;
 
-        public int findTargetSumWays(int[] nums, int target) {
+//        public int findTargetSumWays1(int[] nums, int target) {
+//
+//            int sum = 0;
+//            for (int num : nums) {
+//                sum += num;
+//            }
+//
+//            if ((sum + target) % 2 == 1) {
+//                return 0;
+//            }
+//
+//            if (Math.abs(target) > sum) {
+//                return 0;
+//            }
+//
+//            int bigSize = (sum + target) / 2;
+//            backtracking(nums, bigSize, 0, 0);
+//            return res;
+//        }
 
-            int sum = 0;
-            for (int num : nums) {
-                sum += num;
-            }
-
-            if ((sum + target) % 2 == 1) {
-                return 0;
-            }
-
-            if (Math.abs(target) > sum) {
-                return 0;
-            }
-
-            int bigSize = (sum + target) / 2;
-            backtracking(nums, bigSize, 0, 0);
-            return res;
-        }
-
-        public void backtracking(int[] nums, int target, int sum, int startIndex) {
-            if (sum == target) {
-                res++;
-                return;
-            }
-            if (sum > target) {
-                return;
-            }
-
-            for (int i = startIndex; i < nums.length; i++) {
-                sum += nums[i];
-                backtracking(nums, target, sum, i + 1);
-                sum -= nums[i];
-            }
-        }
+//        public void backtracking(int[] nums, int target, int sum, int startIndex) {
+//            if (sum == target) {
+//                res++;
+//                return;
+//            }
+//            if (sum > target) {
+//                return;
+//            }
+//
+//            for (int i = startIndex; i < nums.length; i++) {
+//                sum += nums[i];
+//                backtracking(nums, target, sum, i + 1);
+//                sum -= nums[i];
+//            }
+//        }
     }
 //leetcode submit region end(Prohibit modification and deletion)
 
