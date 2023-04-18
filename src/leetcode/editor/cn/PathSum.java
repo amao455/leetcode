@@ -92,55 +92,41 @@ class PathSum {
     class Solution {
 
         public boolean hasPathSum(TreeNode root, int targetSum) {
-            if(root == null){
+            if (root == null) {
+                return false;
+            }
+            return backTracking(root, targetSum - root.val);
+        }
+
+        private boolean backTracking(TreeNode root, int targetSum) {
+
+            // 递归结束的条件
+            // 碰到了叶子节点
+            if (root.left == null && root.right == null && targetSum == 0) {
+                return true;
+            }
+            if (root.left == null && root.right == null) {
                 return false;
             }
 
-            // 结束条件
-            targetSum -= root.val;
-            if(root.left == null && root.right == null){
-                return targetSum == 0;
-            }
-
             // 单层递归的逻辑
-            if(root.left != null){
-                boolean left = hasPathSum(root.left, targetSum);
-                if(left){// 已经找到
-                    return true;
-                }
-            }
-            if(root.right != null){
-                boolean right = hasPathSum(root.right, targetSum);
-                if(right){// 已经找到
-                    return true;
-                }
-            }
-
-            return false;
-        }
-        public boolean hasPathSum1(TreeNode root, int targetSum) {
-            // 结束条件
-            // 遇到叶子节点，判断叶子节点
-            if(root.left == null && root.right == null){
-                return targetSum == 0;
-            }
-
-            // 本层的递归逻辑 + 回溯
-            // TODO:看不懂这个sb回溯
-            if(root.left != null){
+            // 当前节点不是叶子节点
+            if (root.left != null) {
                 targetSum -= root.left.val;
-                if(hasPathSum1(root.left, targetSum)){
+                if (backTracking(root.left, targetSum)) {
                     return true;
                 }
                 targetSum += root.left.val;
             }
-            if(root.right != null){
+
+            if (root.right != null) {
                 targetSum -= root.right.val;
-                if(hasPathSum1(root.right, targetSum)){
+                if (backTracking(root.right, targetSum)) {
                     return true;
                 }
                 targetSum += root.right.val;
             }
+
             return false;
         }
     }

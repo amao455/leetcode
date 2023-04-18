@@ -92,14 +92,14 @@ class FindBottomLeftTreeValue {
             }
 
             TreeNode res = new TreeNode();
-            queue.offerLast(root);
+            queue.addFirst(root);
             boolean flag;
             while (!queue.isEmpty()) {
                 flag = false;
-                //TODO：一定要是先算出len
+                //TODO：一定要是先算出len(在之后的操作做队列的长度是会进行改变的)
                 int len = queue.size();
                 for (int i = 0; i < len; i++) {
-                    TreeNode poll = queue.pollFirst();
+                    TreeNode poll = queue.removeFirst();
                     if (flag == false) {
                         res = poll;
                         flag = true;

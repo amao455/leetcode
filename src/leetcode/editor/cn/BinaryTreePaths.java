@@ -49,7 +49,9 @@ class BinaryTreePaths {
 
     class Solution {
 
+        // 存放路径
         List<Integer> path = new ArrayList<>();
+        // 存最终的结果
         List<String> result = new ArrayList<>();
 
         // 回溯求解
@@ -59,12 +61,12 @@ class BinaryTreePaths {
         }
 
         private void backTracking(TreeNode root) {
+            // 前序遍历（中）：为啥子写在这里
             path.add(root.val);
 
-            // 结束条件
+            // 遇到了叶子节点
             if (root.left == null && root.right == null) {
                 StringBuilder sb = new StringBuilder();
-
                 for (int i = 0; i < path.size() - 1; i++) {
                     sb.append(path.get(i).toString() + "->");
                 }
@@ -74,6 +76,7 @@ class BinaryTreePaths {
                 return;
             }
 
+            // 递归和回溯是同时进行的，要放在同一个花括号里
             if (root.left != null) {
                 backTracking(root.left);
                 path.remove(path.size() - 1);

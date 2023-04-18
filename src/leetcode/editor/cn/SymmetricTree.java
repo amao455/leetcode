@@ -83,23 +83,23 @@ class Solution {
     private boolean compare(TreeNode root1, TreeNode root2) {
 
         // 结束条件
-//        if(root1 == null && root2 == null){
-//            return true;
-//        }
-
-        if(root1 == null || root2 == null){
-            return root1 == root2;
-        }
-
-        // 比较值
-        if(root1.val != root2.val){
+        // 节点有为空的情况
+        if(root1 == null && root2 != null){
+            return false;
+        }else if(root1 != null && root2 == null){
+            return false;
+        }else if(root1 == null && root2 == null){
+            return true;
+        }else if(root1.val != root2.val){
+            // 排除了空节点，在排除数值不相同的情况
             return false;
         }
 
-        // 本层的逻辑
+        // 此时就是：左右节点都不为空，且数值相同的情况
+        // 此时才做递归，坐下一层的判断
+        // 单层递归的逻辑
         boolean left = compare(root1.left, root2.right);
         boolean right = compare(root1.right, root2.left);
-
         return (left && right);
 
 
