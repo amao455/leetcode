@@ -88,6 +88,7 @@ class Solution {
 
     }
 
+    // 想一下为何参数的作用
     private void dfs(TreeNode root, int min, int max) {
 
         if(root ==  null){
