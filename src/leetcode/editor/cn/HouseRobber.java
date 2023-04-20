@@ -36,6 +36,7 @@ package leetcode.editor.cn;
 // Related Topics 数组 动态规划 👍 2294 👎 0
 
 class HouseRobber {
+    private static ThreadLocal<String> thread = new ThreadLocal<>();
     public static void main(String[] args) {
         Solution solution = new HouseRobber().new Solution();
 
@@ -44,24 +45,23 @@ class HouseRobber {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int rob(int[] nums) {
+            // dp[i]表示下标i（包括i）以内的房屋，最多可以偷窃的金额
+            int[] dp = new int[nums.length];
             if(nums.length == 1){
                 return nums[0];
             }
-            if(nums.length == 2){
+            if(nums.length == 1){
                 return Math.max(nums[0], nums[1]);
             }
 
-           int[][] dp = new int[nums.length][2];
-           dp[0][0] = nums[0];
-           dp[0][1] = 0;
-           dp[1][0] = nums[1];
-           dp[1][1] = nums[0];
-           for(int i = 2; i < nums.length; i++){
-               dp[i][0] = Math.max(dp[i-1][1]+nums[i], dp[i-2][0] + nums[i]);
-               dp[i][0] = Math.max(dp[i][0], dp[i-2][1]+ nums[i]);
-               dp[i][1] = Math.max(dp[i-1][0], dp[i-1][1]);
-           }
-            return Math.max(dp[nums.length-1][0], dp[nums.length-1][1] );
+            dp[0] = nums[0];
+            dp[1] = Math.max(nums[0], nums[1]);
+
+            for(int i = 2; i < nums.length; i++){
+                dp[i] = Math.max(dp[i-2]+nums[i], dp[i-1]);
+            }
+
+            return dp[nums.length-1];
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)

@@ -4,12 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5b0fe48-86ec-483e-b0fe-16337e4ce22e" name="Default Changelist" comment="2023-4-18(晚上)">
+    <list default="true" id="a5b0fe48-86ec-483e-b0fe-16337e4ce22e" name="Default Changelist" comment="2023-4-19">
       <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/BalancedBinaryTree$Solution$ResNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/BalancedBinaryTree$Solution$TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/BalancedBinaryTree$Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/BalancedBinaryTree$Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/BalancedBinaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/BalancedBinaryTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/BinaryTreePaths$Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/BinaryTreePaths$Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/FindBottomLeftTreeValue$Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/FindBottomLeftTreeValue$Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/MinimumDepthOfBinaryTree$Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/MinimumDepthOfBinaryTree$Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/PathSum$Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/PathSum$Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/SymmetricTree$Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/SymmetricTree$Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/WordBreak$Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/WordBreak$Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/WordBreak.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/WordBreak.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/HouseRobber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/HouseRobber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/MaximumDifferenceBetweenNodeAndAncestor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/MaximumDifferenceBetweenNodeAndAncestor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,22 +57,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/WHU-LiXiaoJian/Desktop/Leetcode&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;leetcode.id&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/WHU-LiXiaoJian/Desktop/Leetcode",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="leetcode.editor.cn" />
@@ -195,7 +205,7 @@
       <workItem from="1680929707229" duration="4972000" />
       <workItem from="1681014803572" duration="40000" />
       <workItem from="1681731875522" duration="23908000" />
-      <workItem from="1681880228056" duration="14375000" />
+      <workItem from="1681880228056" duration="27631000" />
     </task>
     <task id="LOCAL-00001" summary="2022-10-19">
       <created>1666182127864</created>
@@ -253,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681820567820</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="2023-4-19">
+      <created>1681905084432</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681905084432</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +291,8 @@
     <MESSAGE value="2022-10-19" />
     <MESSAGE value="2023-4-18" />
     <MESSAGE value="2023-4-18(晚上)" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023-4-18(晚上)" />
+    <MESSAGE value="2023-4-19" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023-4-19" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
