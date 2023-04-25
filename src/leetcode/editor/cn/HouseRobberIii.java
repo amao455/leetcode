@@ -44,6 +44,9 @@ package leetcode.editor.cn;
 //
 // Related Topics 树 深度优先搜索 动态规划 二叉树 👍 1440 👎 0
 
+import java.util.HashMap;
+import java.util.Map;
+
 class HouseRobberIii {
     public static void main(String[] args) {
         Solution solution = new HouseRobberIii().new Solution();
@@ -90,26 +93,39 @@ class HouseRobberIii {
 
 
     class Solution {
+        // 用map来记录root已经遍历的孙子节点
+        Map<TreeNode, Integer> map = new HashMap<>();
+
         public int rob(TreeNode root) {
-            int[] res = robAction(root);
-            return Math.max(res[0], res[1]);
-
-        }
-
-        int[] robAction(TreeNode root) {
-            int[] res = new int[2];
-            if (root == null) {
-                return res;
+            if(root == null){
+                return 0;
+            }
+            if(root.left == null && root.right == null){
+                return root.val;
+            }
+            if(map.get(root) != null){
+                return map.get(root);
             }
 
-            int[] left = robAction(root.left);
-            int[] right = robAction(root.right);
+            // 考虑本节点
+            int val1 = root.val;
+            if(root.left != null){
+                val1 += rob(root.left.left) + rob(root.left.right);
+            }
+            if(root.right != null){
+                val1 += rob(root.right.left) + rob(root.right.right);
+            }
 
-            res[0] = Math.max(left[0], left[1]) + Math.max(right[0], right[1]);
-            res[1] = root.val + left[0] + right[0];
+            // 不考虑本节点
+            int val2 = rob(root.left) + rob(root.right);
+            // TODO 没想明白（作用：减少复杂度）
+            map.put(root, Math.max(val1, val2));
+            return Math.max(val1, val2);
 
-            return res;
+
         }
+
+
     }
 //leetcode submit region end(Prohibit modification and deletion)
 
