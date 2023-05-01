@@ -51,6 +51,7 @@ class IsSubsequence{
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
         // dp[i][j]：表示以下标i-1为结尾的字符串s，和以下标j-1节气的字符串t，相同子序列的长度
+
     public boolean isSubsequence(String s, String t) {
         if(s.length() == 0){
             return true;
@@ -59,27 +60,37 @@ class Solution {
             return false;
         }
 
-        int[][] dp = new int[s.length()+1][t.length()+1];
+        if(s.length() > t.length()){
+            return false;
+        }
 
-        for(int i = 1; i < s.length()+1; i++){
-            for(int j = 1; j < t.length()+1; j++){
+        int len1 = s.length();
+        int len2 = t.length();
+        int[][] dp = new int[len1+1][len2+1];
+
+        int max = 0;
+        for(int i = 1; i <= len1; i++){
+            for(int j = 1; j <= len2; j++){
                 if(s.charAt(i-1) == t.charAt(j-1)){
                     dp[i][j] = dp[i-1][j-1] + 1;
                 }else{
-                    dp[i][j] = dp[i][j-1];
+                    dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);
+                }
+                if(max < dp[i][j]){
+                    max = dp[i][j];
                 }
             }
         }
 
-        if(dp[s.length()][t.length()] == s.length()){
+        if(max == len1){
             return true;
         }
-
         return false;
+
+
+
     }
-
     public boolean isSubsequence1(String s, String t) {
-
         if(s.length() == 0){
             return true;
         }
@@ -87,27 +98,24 @@ class Solution {
             return false;
         }
 
-        int starts = 0;
-        int startt = 0;
-
-        while(starts < s.length() && startt < t.length()){
-            if(s.charAt(starts) == t.charAt(startt)){
-                starts++;
-                startt++;
-            }else{
-                startt++;
+        int start = 0;
+        for(int i = 0; i < t.length(); i++){
+            if(start >= s.length()){
+                return true;
+            }
+            if(t.charAt(i) == s.charAt(start)){
+                start++;
             }
         }
 
-        if(starts < s.length()){
-            return false;
+        if(start >= s.length()){
+            return true;
         }
 
-        return true;
-
-
+        return false;
 
     }
+
 }
 //leetcode submit region end(Prohibit modification and deletion)
 

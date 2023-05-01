@@ -44,8 +44,40 @@ class DeleteOperationForTwoStrings{
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
-        // 实质：找最大公共子序列
+
+        // dp[i][j]代表word1中以下标i-1结尾的和word2中以j-1结尾的相同所需最小的步数
     public int minDistance(String word1, String word2) {
+        int len1 = word1.length();
+        int len2 = word2.length();
+
+        int[][] dp = new int[len1+1][len2+1];
+        // 初始化
+        for(int i = 0; i <= len1; i++){
+            dp[i][0] = i;
+        }
+        for(int i = 0; i <= len2; i++){
+            dp[0][i] = i;
+        }
+
+        for(int i = 1; i <= len1; i++){
+            for(int j = 1; j <= len2; j++){
+                if(word1.charAt(i-1) == word2.charAt(j-1)){
+                    dp[i][j] = dp[i-1][j-1];
+                }else{
+                    int m1 = dp[i-1][j] + 1; // 删除word1[i]
+                    int m2 = dp[i][j-1] + 1; // 删除word2[j]
+                    int m3 = dp[i-1][j-1] + 2; // 都删除
+                    dp[i][j] = Math.min(Math.min(m1, m2), m3);
+                }
+            }
+        }
+
+        return dp[len1][len2];
+    }
+
+
+     // 实质：找最大公共子序列
+    public int minDistance1(String word1, String word2) {
         int[][] dp = new int[word1.length()+1][word2.length()+1];
 
         for(int i = 1; i < dp.length; i++){
@@ -57,8 +89,7 @@ class Solution {
                 }
             }
         }
-        int res = word1.length() + word2.length() - 2 * dp[dp.length-1][dp[0].length-1];
-        return res;
+        return word1.length() + word2.length() - 2 * dp[dp.length-1][dp[0].length-1];
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

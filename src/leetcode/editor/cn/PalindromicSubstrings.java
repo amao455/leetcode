@@ -46,26 +46,34 @@ class PalindromicSubstrings{
 class Solution {
 
     public int countSubstrings(String s) {
-        int res = 0;
+        int len = s.length();
+        boolean[][] dp = new boolean[len][len];
 
-        for(int i = 0; i < s.length(); i++){
-            res += extend(s, i, i);// 以i为中心
-            res += extend(s, i, i+1);// 以i+1为中心
-        }
-
-        return res;
-
-    }
-
-    public int extend(String s, int start, int end){
         int count = 0;
-        while(start >= 0 && end < s.length() && s.charAt(start) == s.charAt(end)){
-            count++;
-            start--;
-            end++;
+        for(int i = len-1; i >= 0; i--){
+            for(int j = i; j < len; j++){
+                if(s.charAt(i) != s.charAt(j)){
+                    dp[i][j] = false;
+                }else{
+                    if(j - i <= 1){
+                        dp[i][j] = true;
+                        count++;
+                    }else{
+                        if(dp[i+1][j-1]){
+                            dp[i][j] = true;
+                            count++;
+                        }
+                    }
+                }
+            }
         }
+
         return count;
+
+
     }
+
+
 
 
 }

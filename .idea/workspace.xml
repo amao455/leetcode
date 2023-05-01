@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5b0fe48-86ec-483e-b0fe-16337e4ce22e" name="Default Changelist" comment="2023-4-25">
+      <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/HouseRobber$Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/HouseRobber$Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/HouseRobber.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Leetcode/leetcode/editor/cn/HouseRobber.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/BestTimeToBuyAndSellStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/BestTimeToBuyAndSellStock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/BestTimeToBuyAndSellStockIi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/BestTimeToBuyAndSellStockIi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/DeleteOperationForTwoStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/DeleteOperationForTwoStrings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/DistinctSubsequences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/DistinctSubsequences.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/EditDistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/EditDistance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/IsSubsequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/IsSubsequence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/LongestCommonSubsequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/LongestCommonSubsequence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/MaximumLengthOfRepeatedSubarray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/MaximumLengthOfRepeatedSubarray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/MaximumSubarray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/MaximumSubarray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/PalindromicSubstrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/PalindromicSubstrings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/UncrossedLines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/UncrossedLines.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +205,7 @@
       <workItem from="1681880228056" duration="54899000" />
       <workItem from="1682394631948" duration="12975000" />
       <workItem from="1682411536860" duration="6000" />
-      <workItem from="1682425717435" duration="3300000" />
+      <workItem from="1682425717435" duration="25548000" />
     </task>
     <task id="LOCAL-00001" summary="2022-10-19">
       <created>1666182127864</created>
@@ -277,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682409814811</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="2023-4-25">
+      <created>1682429084794</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1682429084794</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

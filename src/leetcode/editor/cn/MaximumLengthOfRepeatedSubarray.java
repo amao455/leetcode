@@ -43,17 +43,21 @@ class MaximumLengthOfRepeatedSubarray {
             int len2 = nums2.length;
 
             int[][] dp = new int[len1][len2];
+            // 初始化操作1
             for (int i = 0; i < len1; i++) {
                 if (nums2[0] == nums1[i]) {
                     dp[i][0] = 1;
                 }
             }
 
+            // 初始化操作2
             for (int j = 0; j < len2; j++) {
                 if (nums1[0] == nums2[j]) {
                     dp[0][j] = 1;
                 }
             }
+
+            // 遍历操作
             for (int i = 1; i < len1; i++) {
                 for (int j = 1; j < len2; j++) {
                     if (nums1[i] == nums2[j]) {
@@ -62,6 +66,7 @@ class MaximumLengthOfRepeatedSubarray {
                 }
             }
 
+            // 查找最大值
             int max = 0;
             for (int i = 0; i < len1; i++) {
                 for (int j = 0; j < len2; j++) {
