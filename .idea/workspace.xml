@@ -6,17 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a5b0fe48-86ec-483e-b0fe-16337e4ce22e" name="Default Changelist" comment="2023-4-25">
       <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/DeleteOperationForTwoStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/DeleteOperationForTwoStrings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/DistinctSubsequences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/DistinctSubsequences.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/EditDistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/EditDistance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/IsSubsequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/IsSubsequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/LongestCommonSubsequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/LongestCommonSubsequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/MaximumLengthOfRepeatedSubarray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/MaximumLengthOfRepeatedSubarray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/MaximumSubarray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/MaximumSubarray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/PalindromicSubstrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/PalindromicSubstrings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/leetcode/editor/cn/UncrossedLines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/editor/cn/UncrossedLines.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +141,29 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Leetcode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Leetcode" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="lua.app" factoryName="Lua Application">
+      <option name="program" value="lua.exe" />
+      <option name="file" value="" />
+      <option name="workingDir" value="$PROJECT_DIR$/src" />
+      <option name="debuggerType" value="1" />
+      <option name="params" value="" />
+      <option name="charset" value="UTF-8" />
+      <option name="showConsole" value="true" />
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
